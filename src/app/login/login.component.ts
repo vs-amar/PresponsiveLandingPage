@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   LoginForm: FormGroup;
-
+  showLoginMessage:any;
   constructor(private FormBuilder:FormBuilder ) { }
 
   ngOnInit() {
