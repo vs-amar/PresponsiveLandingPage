@@ -1,3 +1,4 @@
+import { UserPageComponent } from './user-page/user-page.component';
 import { LoginComponent } from './login/login.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent
+  },
+  {
+    path:'UserHome',
+    component:UserPageComponent
   }
 ];
 

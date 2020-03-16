@@ -1,5 +1,6 @@
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   LoginForm: FormGroup;
   showLoginMessage:any;
-  constructor(private FormBuilder:FormBuilder ) { }
+  constructor(private FormBuilder:FormBuilder,private router:Router ) { }
 
   ngOnInit() {
     this.LoginForm=this.FormBuilder.group({
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
 
       Login()
       {
-
+         this.router.navigate(['/UserHome'])
       }
   }
 
