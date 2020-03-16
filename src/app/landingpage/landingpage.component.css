@@ -192,6 +192,13 @@ body {
     font-size:40px;
     color:blue;
 }
+.footer
+{
+    width: 100%;
+    height: 3%;
+    background-color:rgb(1, 1, 70);
+    align-items: center;
+}
   
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {

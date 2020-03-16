@@ -91,7 +91,7 @@
                                 <form  [formGroup]="MessageForm" class="example_form">
                                     <mat-form-field class="example-full-width">
                                       <mat-label>Enter Your Name</mat-label>
-                                      <input matInput  placeholder="Your Name" formControlName="name">
+                                      <input matInput  placeholder="Your Name" formControlName="name" value="">
                                       <!-- <mat-error *ngIf="name.hasError('required')">
                                            Name Is<strong>Required</strong>
                                           </mat-error> -->
@@ -99,7 +99,7 @@
 
                                       <mat-form-field class="example-full-width">
                                             <mat-label>Enter Contact Number</mat-label>
-                                            <input matInput placeholder="Your Contact Number"  formControlName="contactno">
+                                            <input matInput placeholder="Your Contact Number"  formControlName="contactno" value="">
                                             <!-- <mat-error *ngIf="contactno.hasError('required')">
                                                     Contact Number Is<strong>Required</strong>
                                                    </mat-error> -->
@@ -107,7 +107,7 @@
 
                                           <mat-form-field class="example-full-width">
                                                 <mat-label>Enter Your Email</mat-label>
-                                                <input matInput placeholder="Your Email" formControlName="email">
+                                                <input matInput placeholder="Your Email" formControlName="email" value="">
                                                 <!-- <mat-error *ngIf="email.hasError('required')">
                                                         Email Is<strong>Required</strong>
                                                        </mat-error> -->
@@ -148,6 +148,7 @@
                             </div>
                            
                           </div>
+                          <p style="color:white; margin-left: 40%;">Developed By Am@rJ.2020</p>
 
       
                 </mat-card-content>
@@ -158,6 +159,5 @@
                 </mat-card-actions>
               </mat-card>
 </div>
-
 </body>
 </html>
