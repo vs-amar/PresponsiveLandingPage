@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+
+  .topnav:hover
+  {
+      cursor: pointer;
+  }
+
+  .example_card {
+    width: auto;
+    /* background-image: url('http://localhost:4200/assets/brown-book-page-1112048.jpg'); */
+      
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .image{
+    width: 100%;
+    height: 50%;
+  }
+
+  .container {
+    position: relative;
+    font-family: Arial;
+   
+  }
+  
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .shopname_text
+  {  
+    position: absolute;
+    font-size:5vw;
+    top: 10px;
+    left:25%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+  }
+
+  .about_us_text{
+    position: absolute;
+    font-size:5vw;
+    top: 10px;
+    left:33%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about_text_block
+  {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    font-size:3vw;
+    /* background-color: black; */
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .About_text
+  {
+    font-size:3vw;
+    color: cyan;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .contact_card
+  {
+      background-color: rgb(31, 30, 30);
+      width: auto;
+      height: auto;
+  }
+
+  .heading_contact_us
+  {
+    font-size:3vw;
+    color: cyan;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 40%;
+  }
+ 
+  .Contact_container
+  {
+    position: relative;
+    font-family: Arial;   
+   /* // width: 100%;
+    height: 20%; */
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width:49%;
+    padding: 10px;
+    height: 530px;
+    border-radius: 4px;
+    margin: 2px;
+    background-color: rgb(136, 134, 134);
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
+
+  .example_form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 10% 10% 10% 10%;
+   
+  }
+  
+  .example-full-width {
+    width: 80%;
+  }
+  .btn_send
+  {
+      background-color: rgb(84, 216, 23);
+      width: 100px;
+      height: 50px;
+      border-radius: 4px;
+      margin-left: 25%;
+      box-shadow: black;
+      border: none;
+  }
+
+  .btn_send:hover
+  {
+   background-color: rgb(22, 119, 5);
+   cursor: pointer;
+  }
+.location_icon
+{
+    font-size:40px;
+    color:blue;
+}
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
