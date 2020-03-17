@@ -12,14 +12,20 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-import { MatDialogModule } from '@angular/material';
+import { MatDialogModule, MatRippleModule, MatMenuModule } from '@angular/material';
 import { UserPageComponent } from './user-page/user-page.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { DatePipe } from '@angular/common';
+import {MatButtonModule} from '@angular/material/button';
+import { ListofbooksComponent } from './listofbooks/listofbooks.component';
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
     LoginComponent,
-    UserPageComponent
+    UserPageComponent,
+    ListofbooksComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +37,17 @@ import { UserPageComponent } from './user-page/user-page.component';
     MatInputModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    MatRippleModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [
+    DatePipe,
+    LandingpageComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

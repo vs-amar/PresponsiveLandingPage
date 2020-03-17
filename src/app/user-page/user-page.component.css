@@ -1,0 +1,53 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .toolbar_item{
+    margin-left: 5%;
+  }
+
+  .card_container {
+    display:flex;
+    flex-wrap:wrap;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-left: 5%;
+   /* // padding: 15px;  */ 
+  }
+  .mat-card {
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color: white;
+    height: auto;
+    width: auto;
+    margin: 30px  ;
+    padding: 15px;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .card:hover{
+    background-color: #3282b8;
+    cursor: pointer;
+  }
+
+  .doctype{
+    color: white;
+  }
+
+  .action_buttons:hover
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: green;
+  }
+  .action_buttons
+  {
+  
+  }

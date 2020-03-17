@@ -4,7 +4,7 @@
         <mat-card-header>
         
         <mat-card-title class="heading">Login </mat-card-title>
-        <mat-card-subtitle style="color: red;" *ngIf="showLoginMessage">please enter correct username and password</mat-card-subtitle>
+        <mat-card-subtitle style="color: red;" *ngIf="showLoginMessage">PLEASE ENTER CORRCT USER NAME & PASSWORD </mat-card-subtitle>
         
         </mat-card-header>
         <mat-card-content>
@@ -21,7 +21,7 @@
         </form>
         </mat-card-content>
         <mat-card-actions>
-        <button mat-raised-button [mat-dialog-close] color="primary" (click)="Login()" >Submit</button>
+        <button mat-raised-button color="primary" (click)="Login()" >Submit</button>
         <button mat-raised-button [mat-dialog-close] color="primary" (click)="Clear()">Cancel</button>
         </mat-card-actions>
         </mat-card>

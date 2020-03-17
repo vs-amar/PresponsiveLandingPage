@@ -1,1 +1,65 @@
-<p>user-page works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+   <a class="active">  <span class="toolbar_item" (click)="mainHomePage()">Home</span></a>
+    <span class="toolbar_item" (click)="showlistofbook()">List Of Books</span>
+    <span class="example-spacer"></span>
+    <span style="font-size: 10px;font-family:cursive" >{{UserName}}</span>
+    <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon> -->
+    
+    <mat-icon class="example-icon" style="font-size:40px;"  aria-hidden="false" aria-label="Example delete icon" [matMenuTriggerFor]="menu">account_circle
+        <mat-menu class="mat_menu" #menu="matMenu">
+            <mat-card class="admininfocard">
+                <mat-card-content class="mat_menu_content" > 
+                        <button class="btnprofile" (click)="funadminInfo()" mat-menu-item>
+                                <mat-icon class="icon_Admin_info">informations</mat-icon>
+                                <span>Admin Info</span>
+                        </button>
+                        <button class="btnprofile" (click)="logout()" mat-menu-item  >
+                                <mat-icon class="icon_Admin_info">settings_power</mat-icon>
+                                <span>Log Out</span>
+                        </button>
+                </mat-card-content>
+          </mat-card>
+</mat-menu>
+    </mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div class="card_container">
+      
+    <mat-card  *ngFor="let book of booklist" class="example-card example-ripple-container mat-elevation-z4" matRipple
+    [matRippleCentered]="centered"
+    [matRippleDisabled]="disabled"
+    [matRippleUnbounded]="unbounded"
+    [matRippleRadius]="radius"
+    [matRippleColor]="color">
+        <mat-card-header>
+          <mat-card-title><strong>{{book.book_name}}</strong></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image style="width: 300px;" [src]="imagePath" alt="Photo of book">
+        <mat-card-content>
+          <p>
+            The Auther of This book is <strong>{{book.auther_name}}</strong> 
+          </p>
+         <p> <strong style="color:rgb(187, 38, 70);">Price: {{book.price}}</strong> </p> 
+         <p>  <strong style="color:rgb(10, 69, 146);" >Doscount:{{book.discount}}</strong> </p>
+         <p>  <strong style="color:green;"> Discount Price:{{book.discount_price}}</strong></p>
+        </mat-card-content>
+        <mat-card-actions style="margin-left: 20%;">
+          <button  mat-raised-button color="primary"  class="action_buttons ">BUY</button>
+          <button  mat-raised-button color="primary" class="action_buttons ">SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      
+    
+    <!-- <a  *ngFor="let book of booklist" class="card example-ripple-container mat-elevation-z4"  matRipple
+    [matRippleCentered]="centered"
+    [matRippleDisabled]="disabled"
+    [matRippleUnbounded]="unbounded"
+    [matRippleRadius]="radius"
+    [matRippleColor]="color"   (click)="funPerticularDocuments(document.Document_Type_Name)">
+          <span class="doctype">{{book.book_name}}</span>
+        </a> -->
+</div>

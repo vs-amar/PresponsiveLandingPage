@@ -1,3 +1,4 @@
+import { ListofbooksComponent } from './listofbooks/listofbooks.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { LoginComponent } from './login/login.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
@@ -7,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'landingpage',
     component:LandingpageComponent
   },
   {
@@ -17,6 +18,15 @@ const routes: Routes = [
   {
     path:'UserHome',
     component:UserPageComponent
+  },
+  {
+    path:'booklist',
+    component:ListofbooksComponent
+  },
+  {
+    path:'',
+    redirectTo:'landingpage',
+    pathMatch:'full'
   }
 ];
 

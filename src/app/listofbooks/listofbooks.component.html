@@ -1,0 +1,95 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="toolbar_item1"  (click)="mainHomePage()">Home</span>
+      <span class="toolbar_item" (click)="showlistofbook()">List Of Books</span>
+      <span class="example-spacer"></span>
+      <span style="font-size: 10px;font-family: cursive" >{{UserName}}</span>
+      <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon> -->
+      <mat-icon class="example-icon" style="font-size:40px;" aria-hidden="false" aria-label="Example delete icon" [matMenuTriggerFor]="menu">account_circle
+      
+        <mat-menu class="mat_menu" #menu="matMenu">
+            <mat-card class="admininfocard">
+                <mat-card-content class="mat_menu_content" > 
+                        <button class="btnprofile" (click)="funadminInfo()" mat-menu-item>
+                                <mat-icon class="icon_Admin_info">informations</mat-icon>
+                                <span>Admin Info</span>
+                        </button>
+                        <button class="btnprofile" (click)="logout()" mat-menu-item  >
+                                <mat-icon class="icon_Admin_info">settings_power</mat-icon>
+                                <span>Log Out</span>
+                        </button>
+                </mat-card-content>
+          </mat-card>
+</mat-menu>
+    </mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+<div class="example-container mat-elevation-z8">
+
+    <mat-card class="card">
+        <mat-card-content>
+            <mat-card-title class="tittle">AVAILABLE BOOKS</mat-card-title>
+            <mat-form-field style="width:100% ">
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Book">
+            </mat-form-field>
+                  <div class="scrollit">
+                  <mat-table #table [dataSource]="dataSource" [class.isMobile]="isMobile"  matSort >
+    
+                    <ng-container matColumnDef="new">
+                      <mat-header-cell *matHeaderCellDef mat-sort-header>  </mat-header-cell>
+                      <mat-cell *matCellDef="let row"> 
+                        <span class="mobile-label"></span>
+                        <mat-icon class="newicon">fiber_new</mat-icon>
+                      </mat-cell>
+                    </ng-container>
+      
+                  <ng-container matColumnDef="Bool_Name">
+                    <mat-header-cell *matHeaderCellDef> BOOK NAME </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> 
+                      <span class="mobile-label"> BOOK NAME</span>
+                      {{row.book_name}}
+                    </mat-cell>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="Auther_Name">
+                    <mat-header-cell *matHeaderCellDef> AUTHER NAME </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> 
+                      <span class="mobile-label">AUTHER NAME:</span>
+                      {{row.auther_name}} 
+                    </mat-cell>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="Pirce">
+                    <mat-header-cell *matHeaderCellDef>  PRICE  </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> 
+                      <span class="mobile-label">PRICE:</span>
+                      {{row.price}}
+                    </mat-cell>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="Discount_Pirse">
+                    <mat-header-cell *matHeaderCellDef> DISCOUNT PRICE </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> 
+                      <span class="mobile-label"> DISCOUNT PRICE :</span>
+                      {{row.discount_price}} 
+                    </mat-cell>
+                  </ng-container>
+    
+                  <ng-container matColumnDef="action">
+                    <mat-header-cell *matHeaderCellDef> ACTION </mat-header-cell>
+                    <mat-cell *matCellDef="let row"> 
+                      <span class="mobile-label">ACTION:</span>
+                      <button class="button1" mat-raised-button  (click)="funViewRequestDetails(row.Emp_First_Name,row.Emp_Last_Name,row.Document_Name,row.Request_Message,row.Emp_Comp_Id,row.Request_Id)" >View Details</button>
+                    </mat-cell>
+                  </ng-container>
+      
+                  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                </mat-table>
+                <mat-paginator class="pageinater" [pageSizeOptions]="[10, 25, 100]"></mat-paginator>        
+              </div>
+    
+            </mat-card-content>
+      </mat-card>
+    </div>
