@@ -19,13 +19,16 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { DatePipe } from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import { ListofbooksComponent } from './listofbooks/listofbooks.component';
+import { PaymentformComponent } from './paymentform/paymentform.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
     LoginComponent,
     UserPageComponent,
-    ListofbooksComponent
+    ListofbooksComponent,
+    PaymentformComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { ListofbooksComponent } from './listofbooks/listofbooks.component';
     MatPaginatorModule,
     MatButtonModule,
     MatRippleModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSelectModule
   ],
   providers: [
     DatePipe,

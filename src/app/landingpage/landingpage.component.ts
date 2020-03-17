@@ -28,9 +28,10 @@ export class LandingpageComponent implements OnInit {
   ngOnInit() {
 
 
+
    this.imagePath=this.getimage;
  
-    this.activeHome='active';
+   this.activeHome='active background-color: #ddd;';
 
     this.MessageForm=this.formbuilder.group({
       

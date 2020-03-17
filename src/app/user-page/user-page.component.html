@@ -48,7 +48,7 @@
          <p>  <strong style="color:green;"> Discount Price:{{book.discount_price}}</strong></p>
         </mat-card-content>
         <mat-card-actions style="margin-left: 20%;">
-          <button  mat-raised-button color="primary"  class="action_buttons ">BUY</button>
+          <button  mat-raised-button color="primary" (click)=buybook()  class="action_buttons ">BUY</button>
           <button  mat-raised-button color="primary" class="action_buttons ">SHARE</button>
         </mat-card-actions>
       </mat-card>

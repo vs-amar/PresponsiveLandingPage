@@ -1,3 +1,4 @@
+import { PaymentformComponent } from './paymentform/paymentform.component';
 import { ListofbooksComponent } from './listofbooks/listofbooks.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'booklist',
     component:ListofbooksComponent
+  },
+  {
+    path:'payment',
+    component:PaymentformComponent
   },
   {
     path:'',

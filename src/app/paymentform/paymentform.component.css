@@ -1,0 +1,28 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .btn_procced
+  {
+      width: 100%;
+      background-color: rgb(146, 145, 145);
+  }
+  .btn_procced:hover
+  {
+      width: 100%;
+      background-color: rgb(44, 177, 32);
+  }
+  .example-full-width {
+    width: 100%;
+  }
+
+  .btn_pay
+  {
+    width: 100%;
+    background-color: rgb(146, 145, 145);
+  }
+  .btn_pay:hover
+  {
+    width: 100%;
+    background-color: rgb(44, 177, 32);
+  }

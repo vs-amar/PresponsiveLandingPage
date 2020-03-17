@@ -1,0 +1,63 @@
+<mat-card class="example-card">
+    <mat-card-header>
+  
+      <mat-card-title>BUY BOOK</mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+    <mat-card-content>
+        <mat-form-field class="example-full-width">
+            <mat-label>Payment Type</mat-label>
+            <mat-select [(value)]="selected" (selectionChange)="optionselected(selected)"  [formControl]="selectoption" required>
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let type of paymenttype"  value="{{type.type}}">
+                {{type.type}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="selectoption.hasError('required')">Please choose Payment Type</mat-error>
+            <mat-hint>{{selectoption.value?.sound}}</mat-hint>
+          </mat-form-field>
+      
+
+          <form *ngIf="showDebicardPaymentForm" [formGroup]="MessageForm" class="example_form">
+           
+              <mat-form-field class="example-full-width">
+                    <mat-label>ENTER DIBIT CARD NUMBER</mat-label>
+                    <input type="number" matInput placeholder="ENTER DIBIT CARD NUMBER"  formControlName="debitcard_number" value="">
+                 
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width">
+                        <mat-label>DATE</mat-label>
+                        <input type="date" matInput placeholder="DATE" formControlName="date" value="">
+                       
+                      </mat-form-field>
+
+                      <mat-form-field class="example-full-width">
+                        <mat-label>CVV</mat-label>
+                        <input type="number" matInput placeholder="CVV" formControlName="cvv" value="">
+                      
+                      </mat-form-field>
+                      <button mat-raised-button class="btn_procced" (click)="PROCCED()">PROCCED</button>
+               
+                    </form>
+
+                        
+                       <mat-form-field *ngIf="showOTPInput" class="example-full-width">
+                        <mat-label>OTP</mat-label>
+                        <input type="number" matInput placeholder="OTP" [formControl]="OTP" required>
+                    
+                      </mat-form-field>
+                      <button  *ngIf="showOTPInputbtn" mat-raised-button class="btn_pay" (click)="PAY()">PAY</button>
+                      <button  *ngIf="showOTPInputBYE" mat-raised-button class="btn_pay" (click)="PAY()">BUY</button>
+                        
+        
+
+
+
+    </mat-card-content>
+    <mat-card-actions>
+   
+    </mat-card-actions>
+  </mat-card>
+  

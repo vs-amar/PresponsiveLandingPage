@@ -1,8 +1,10 @@
+import { PaymentformComponent } from './../paymentform/paymentform.component';
 import { LandingpageComponent } from './../landingpage/landingpage.component';
 import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
-import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort, MatDialogRef, MatDialog } from '@angular/material';
 import { Alert } from 'selenium-webdriver';
+import { DirectiveResolver } from '@angular/compiler';
 
 @Component({
   selector: 'app-user-page',
@@ -19,7 +21,7 @@ export class UserPageComponent implements OnInit {
 
   radius: number;
   color: string;
-  constructor(private router:Router,private landingpage:LandingpageComponent ) { }
+  constructor(private router:Router,private landingpage:LandingpageComponent,private dialog:MatDialog ) { }
 @Input()
 
   ngOnInit() {
@@ -49,7 +51,6 @@ export class UserPageComponent implements OnInit {
       {book_name:'PQR',auther_name:'XYZ',price:'₹800',discount_price:'₹720',discount:'20%'},
       {book_name:'KMLOP',auther_name:'SHIVA RAJPUT',price:'₹800',discount_price:'₹720',discount:'20%'},
       {book_name:'ABCDEFG',auther_name:'SUHAS KUMAR',price:'₹800',discount_price:'₹720',discount:'20%'},
-      {book_name:'RTDFG',auther_name:'AMIT PATIL',price:'₹500',discount_price:'₹720',discount:'20%'},
         ];
 
     this.router.navigate(['/UserHome'])
@@ -71,6 +72,16 @@ this.router.navigate(['/booklist'])
   funadminInfo()
   {
 
+  }
+
+  buybook()
+  {
+    const dialogRef = this.dialog.open(PaymentformComponent, {
+      width: '500px',
+      height:'500px',  
+      data: {}
+  
+   });
   }
 
 }
