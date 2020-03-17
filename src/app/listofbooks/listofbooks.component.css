@@ -79,9 +79,11 @@
   }
   .toolbar_item{
     margin-left: 5% !important;
+    cursor: pointer;
   }
 
   .toolbar_item1
   {
     margin-left: none !important;
+    cursor: pointer;
   }
