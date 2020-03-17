@@ -88,5 +88,9 @@ funadminInfo()
   
 }
 
+showlistofbook()
+{
+  this.router.navigate(['/booklist'])
+}
 
 }

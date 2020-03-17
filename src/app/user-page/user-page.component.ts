@@ -13,11 +13,23 @@ export class UserPageComponent implements OnInit {
   booklist:any;
   imagePath: any;
   UserName:any;
+  centered = false;
+  disabled = false;
+  unbounded = false;
+
+  radius: number;
+  color: string;
   constructor(private router:Router,private landingpage:LandingpageComponent ) { }
 @Input()
 
   ngOnInit() {
 
+
+        this.centered=false
+        this.centered = false;
+        this.disabled = false;
+        this.unbounded = false;
+       
     this.UserName=atob(localStorage.getItem('USERDATA'));
 
     this.imagePath=this.landingpage.getimage;
