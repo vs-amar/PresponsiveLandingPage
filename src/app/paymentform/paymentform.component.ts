@@ -15,6 +15,7 @@ export class PaymentformComponent implements OnInit {
   showOTPInput:boolean=false;
   showOTPInputbtn:boolean=false;
   showOTPInputBYE:boolean=false;
+  selected:string;
   selectoption = new FormControl('', Validators.required);
   OTP = new FormControl('', Validators.required);
   MessageForm:FormGroup
